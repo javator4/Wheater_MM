@@ -28,8 +28,8 @@ public class Current {
     private int humidity;
     private int cloud;
     private float feelslike_c;
-    private float getFeelslike_f;
-    private float vis_k;
+    private float Feelslike_f;
+    private float vis_km;
     private float vis_miles;
     private int uv;
     private float gust_mph;
