@@ -1,6 +1,7 @@
 package pl.sda;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
+import org.apache.log4j.Logger;
 import pl.sda.model.Current;
 import pl.sda.model.Location;
 import pl.sda.model.Weather;
@@ -14,7 +15,15 @@ import java.net.URL;
  *
  */
 public class App {
+
+    private static Logger logger = Logger.getLogger(App.class);
+
     public static void main(String[] args) {
+
+        logger.info("uruchomienie aplikacji");
+        logger.warn("warning");
+        logger.debug("debug");
+        logger.error("error");
 
         String url = "http://api.apixu.com/v1/current.json?key=0a566d9f9235405fabb82135191307&q=Gdansk";
 
