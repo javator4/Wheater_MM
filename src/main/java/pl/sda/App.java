@@ -68,11 +68,11 @@ public class App {
 
  */
 
-WeatherForecast weatherForecast = new OrgImplementation(weatherService, "Athens");
-WeatherForecast weatherForecast1 = new FasterImplementation(weatherService, "Athens");
-
-        System.out.println(weatherForecast.getWeather());
-        System.out.println(weatherForecast1.getWeather());
+//WeatherForecast weatherForecast = new OrgImplementation(weatherService, "Athens");
+//WeatherForecast weatherForecast1 = new FasterImplementation(weatherService, "Athens");
+//
+//        System.out.println(weatherForecast.getWeather());
+//        System.out.println(weatherForecast1.getWeather());
 
         JsonDataFaster jsonDataFaster = new JsonDataFaster();
         jsonDataFaster.setUrl("http://api.apixu.com/v1/current.json");
@@ -80,6 +80,13 @@ WeatherForecast weatherForecast1 = new FasterImplementation(weatherService, "Ath
         jsonDataFaster.setCity("London");
         jsonDataFaster.build();
         System.out.println(jsonDataFaster.getWeather());
+
+        JsonDataOrg jsonDataOrg = new JsonDataOrg();
+        jsonDataOrg.setUrl("http://api.apixu.com/v1/current.json");
+        jsonDataOrg.setApiKey("0a566d9f9235405fabb82135191307");
+        jsonDataOrg.setCity("Paris");
+        jsonDataOrg.build();
+        System.out.println(jsonDataOrg.getWeather());
 
 
 
