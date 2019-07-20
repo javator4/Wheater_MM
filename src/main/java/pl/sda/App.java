@@ -74,6 +74,13 @@ WeatherForecast weatherForecast1 = new FasterImplementation(weatherService, "Ath
         System.out.println(weatherForecast.getWeather());
         System.out.println(weatherForecast1.getWeather());
 
+        JsonDataFaster jsonDataFaster = new JsonDataFaster();
+        jsonDataFaster.setUrl("http://api.apixu.com/v1/current.json");
+        jsonDataFaster.setApiKey("0a566d9f9235405fabb82135191307");
+        jsonDataFaster.setCity("London");
+        jsonDataFaster.build();
+        System.out.println(jsonDataFaster.getWeather());
+
 
 
 
